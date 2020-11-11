@@ -3,10 +3,10 @@ Repo zespołu Drop-the-base (zespół nr 1)
 
 # SQL analysis of the European Soccer Database
 
-##Table of contents
+## Table of contents
 * [General info](#general-info)
 * [Structure](#structure)
-* [Content] (#content)
+* [Content](#content)
 
 ## General info
 This GitHub repository contains code samples that demonstrate analysis of the data contained in the database European Soccer Database. The sample includes sample scripts that can be used to explore the data in SQL in this database. Soccer database includes 11 European Countries with their lead championship for seasons 2008 to 2016 for players and Teams attributes sourced from EA Sports FIFA video game series.
@@ -14,7 +14,7 @@ This GitHub repository contains code samples that demonstrate analysis of the da
 Database link: https://www.kaggle.com/hugomathien/soccer 
 
 ## Structure
-Designed the tables to hold data in the CSVs, import the CSVs into a SQL database, and answer questions about the data using SQL queries. 
+The table is designed to hold data in the CSVs, import the CSVs into a SQL database, and answer questions about the data using SQL queries. 
 
 Activities done : Data Modeling, Data Engineering, Data Analysis
 Technology Used: PostgreSQL
