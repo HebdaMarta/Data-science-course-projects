@@ -16,9 +16,9 @@ Database link: https://www.kaggle.com/hugomathien/soccer
 ## Structure
 The table is designed to hold data in the CSVs, import the CSVs into a SQL database, and answer questions about the data using SQL queries. 
 
-Activities done : Data Modeling, Data Engineering, Data Analysis
-Technology Used: PostgreSQL
-Authors: Hebda Marta, Maj Wojciech, Marciniak Elżbieta, Pich Filip
+- Activities done: Data Modeling, Data Engineering, Data Analysis,
+- Technology Used: PostgreSQL,
+- Authors: Hebda Marta, Maj Wojciech, Marciniak Elżbieta, Pich Filip.
 
 ## Content
 This GitHub repository contains the following files:
