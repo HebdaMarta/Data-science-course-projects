@@ -1,0 +1,94 @@
+
+
+select player_api_id from player_attributes
+inner join match on match.player_api_id = player_attributes.player_api_id 
+group by player_api_id; 
+team_attributes
+
+
+---buildUpPlaySpeed
+
+select team_long_name, team_attributes."buildUpPlaySpeed" from team
+inner join team_attributes on team.team_api_id = team_attributes.team_api_id 
+order by "buildUpPlaySpeed" desc
+
+
+---buildUpPlayDribbling
+
+select team_long_name, team_attributes."buildUpPlayDribbling" from team
+inner join team_attributes on team.team_api_id = team_attributes.team_api_id 
+where "buildUpPlayDribbling" is not null 
+order by "buildUpPlayDribbling" desc
+
+---chanceCreationPassing - Szansa na stworzenie podania
+
+select team_long_name, team_attributes."chanceCreationPassing" from team
+inner join team_attributes on team.team_api_id = team_attributes.team_api_id 
+order by "chanceCreationPassing" desc
+
+---chanceCreationShooting - Szansa na strzelenie gola
+
+select team_long_name, team_attributes."chanceCreationShooting" from team
+inner join team_attributes on team.team_api_id = team_attributes.team_api_id 
+order by "chanceCreationShooting" desc
+
+
+--- Home_team_goal
+
+select season, home_team_goal, match_player.player_name from match
+inner join match_player on match_player.match_api_id = match.match_api_id 
+order by home_team_goal desc
+
+--- Home_team_goal + group by
+
+select season, home_team_goal, match_player.player_name from match
+inner join match_player on match_player.match_api_id = match.match_api_id 
+group by season, match_player.player_name, home_team_goal
+order by home_team_goal desc
+
+--- Away team goal
+
+select season, away_team_goal, match_player.player_name from match
+inner join match_player on match_player.match_api_id = match.match_api_id 
+order by away_team_goal desc
+
+--- Szukam Cristiano Ronaldo
+
+select season, away_team_goal, match_player.player_name from match
+inner join match_player on match_player.match_api_id = match.match_api_id 
+where player_name = 'Cristiano Ronaldo'
+group by season, match_player.player_name, away_team_goal 
+order by away_team_goal
+
+
+---top piłkarze by overall rating
+select overall_rating, player.player_name, 
+row_number()over (partition by overall_rating) as miejsce 
+from player_attributes
+inner join player on player_attributes.player_api_id = player.player_api_id;
+
+---top rank
+select overall_rating, player.player_name,
+rank()over (order by overall_rating desc) as miejsce 
+from player_attributes
+inner join player on player_attributes.player_api_id = player.player_api_id
+where overall_rating is not null ;
+
+---chcę dodać sezon
+
+select overall_rating, player.player_name, match.season,
+dense_rank()over (order by overall_rating desc) as miejsce 
+from player_attributes
+full outer join player on player_attributes.player_api_id = player.player_api_id
+
+where overall_rating is not null and season = '2016'
+
+---szansa na stworzenie gola, po latach, tutaj 2011
+
+select extract(year from date) as Rok, team_long_name, team_attributes."chanceCreationShooting" as Szansa from team
+inner join team_attributes on team.team_api_id = team_attributes.team_api_id 
+where extract(year from date) = '2011'
+order by "chanceCreationShooting" desc
+limit 10
+
+
