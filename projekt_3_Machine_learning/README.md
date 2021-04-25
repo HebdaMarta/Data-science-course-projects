@@ -26,9 +26,9 @@ The table, which contains 7 columns, is designed to hold data in the CSV and ans
 - charges: Individual medical costs billed by health insurance
 
 
-- Activities done: Data Modeling, Data Engineering, Data Analysis,
-- Technology Used: Python, Machine learning models for regression (Random forest, XGboost, SVR, LinearRegression, KNN)
-- Authors: Hebda Marta, Maj Wojciech, Marciniak Elżbieta, Pich Filip.
+Activities done: Data Modeling, Data Engineering, Data Analysis,
+Technology Used: Python, Machine learning models for regression (Random forest, XGboost, SVR, LinearRegression, KNN)
+Authors: Hebda Marta, Maj Wojciech, Marciniak Elżbieta, Pich Filip.
 
 ## Content
 This GitHub repository contains the following files:
