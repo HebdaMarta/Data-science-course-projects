@@ -1,7 +1,7 @@
 # JDSZR2-Drop-the-base
 Repo zespołu Drop-the-base (zespół nr 1)
 
-# Analysis of personal medical costs in Python using machine learning models 
+# Regression of personal medical costs in Python using machine learning models 
 
 ## Table of contents
 * [General info](#general-info)
@@ -27,11 +27,11 @@ The table, which contains 7 columns, is designed to hold data in the CSV and ans
 
 
 Activities done: Data Modeling, Data Engineering, Data Analysis,
-Technology Used: Python, Machine learning models for regression (Random forest, XGboost, SVR, LinearRegression, KNN)
-Authors: Hebda Marta, Maj Wojciech, Marciniak Elżbieta, Pich Filip.
+- Technology Used: Python, Machine learning models for regression (Random forest, XGboost, SVR, LinearRegression, KNN)
+- Authors: Hebda Marta, Maj Wojciech, Marciniak Elżbieta, Pich Filip.
 
 ## Content
 This GitHub repository contains the following files:
-1. Python scripts with with all models and their results.
+1. Python scripts with all models and their results.
 2. Graphical presentation of the results of analyzes in python.
 3. A final presentation containing all the most important conclusions from the analysis.
